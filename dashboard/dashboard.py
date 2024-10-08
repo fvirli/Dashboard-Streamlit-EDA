@@ -8,8 +8,8 @@ sns.set(style='dark')
 # Mengatur tampilan
 st.title("Dashboard Kualitas Udara di Tiantan")
 
-# Memuat dataset
-data_path = "main_data.csv"
+# Memuat dataset dari URL raw
+data_path = "https://raw.githubusercontent.com/fvirli/Dashboard-Streamlit-EDA/refs/heads/main/dashboard/main_data.csv"
 df = pd.read_csv(data_path)
 
 # Mendapatkan nilai minimum dan maksimum tahun dari dataset
