@@ -65,8 +65,12 @@ with col2:
 # Visualisasi tambahan berdasarkan tahun yang dipilih
 st.subheader(f"Analisis Detil untuk Tahun {selected_years[0]} hingga {selected_years[1]}")
 
-# Buat visualisasi tambahan seperti boxplot atau heatmap
+# Boxplot untuk distribusi suhu berdasarkan PM2.5
 fig3, ax3 = plt.subplots()
 sns.boxplot(data=filtered_data, x='PM2.5', y='TEMP', ax=ax3)
 ax3.set_title(f"Distribusi Suhu berdasarkan PM2.5 ({selected_years[0]}-{selected_years[1]})")
 st.pyplot(fig3)
+
+# Menyediakan insight tambahan
+st.subheader("Insight dan Kesimpulan")
+st.write("Dari analisis ini, kita bisa melihat bagaimana polusi udara berpengaruh terhadap suhu dan kelembapan. Selain itu, tren rata-rata konsentrasi polutan menunjukkan perubahan signifikan selama rentang waktu yang dipilih. Pastikan untuk memantau kualitas udara secara berkala untuk memahami dampaknya terhadap kesehatan dan lingkungan.")
